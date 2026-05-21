@@ -1,179 +1,192 @@
-<!-- ===================== -->
-<!-- OUR JOURNEY 3D FIXED -->
-<!-- ===================== -->
+<!-- ========================= -->
+<!-- OUR JOURNEY NETFLIX 3D -->
+<!-- ========================= -->
 
 <section class="section journey-section">
 
-<div class="journey-bg"></div>
+<div class="journey-glow"></div>
 
 <div class="container">
 
 <div class="section-header">
-<div class="section-subtitle">OUR JOURNEY</div>
-<h2 class="section-title">Perjalanan Kami</h2>
+<div class="section-subtitle">
+OUR JOURNEY
 </div>
 
-<div class="journey-timeline">
-
-<!-- 01 -->
-<div class="journey-row left">
-
-<div class="journey-card"
-onclick="openJourney(1)">
-
-<div class="journey-number">01</div>
-
-<div class="journey-thumb">
-<img src="foto1.jpg">
+<h2 class="section-title">
+Perjalanan Kami
+</h2>
 </div>
 
-<div class="journey-content">
+
+<div class="journey-list">
+
+
+<!-- 1 -->
+
+<div class="story-card"
+onclick="openJourney(0)">
+
+<div class="episode">
+EP 01
+</div>
+
+<div class="story-image">
+<img src="cover1.jpg">
+</div>
+
+<div class="story-text">
 <h3>Pertama Komunikasi</h3>
 <p>14 September 2021</p>
 </div>
 
 </div>
 
-<div class="journey-arrow">
-➜
+
+<!-- 2 -->
+
+<div class="story-card"
+onclick="openJourney(1)">
+
+<div class="episode">
+EP 02
 </div>
 
+<div class="story-image">
+<img src="cover2.jpg">
 </div>
 
-
-<!-- 02 -->
-<div class="journey-row right">
-
-<div class="journey-arrow">
-⬅
-</div>
-
-<div class="journey-card"
-onclick="openJourney(2)">
-
-<div class="journey-number">02</div>
-
-<div class="journey-thumb">
-<img src="foto2.jpg">
-</div>
-
-<div class="journey-content">
+<div class="story-text">
 <h3>Pertemuan</h3>
 <p>28 November 2021</p>
 </div>
 
 </div>
 
+
+<!-- 3 -->
+
+<div class="story-card"
+onclick="openJourney(2)">
+
+<div class="episode">
+EP 03
 </div>
 
-
-<!-- 03 -->
-<div class="journey-row left">
-
-<div class="journey-card"
-onclick="openJourney(3)">
-
-<div class="journey-number">03</div>
-
-<div class="journey-thumb">
-<img src="foto3.jpg">
+<div class="story-image">
+<img src="cover3.jpg">
 </div>
 
-<div class="journey-content">
+<div class="story-text">
 <h3>Tunangan</h3>
 <p>13 Agustus 2023</p>
 </div>
 
 </div>
 
-<div class="journey-arrow">
-➜
+
+<!-- 4 -->
+
+<div class="story-card"
+onclick="openJourney(3)">
+
+<div class="episode">
+EP 04
 </div>
 
+<div class="story-image">
+<img src="cover4.jpg">
 </div>
 
-
-<!-- 04 -->
-<div class="journey-row right">
-
-<div class="journey-arrow">
-⬅
-</div>
-
-<div class="journey-card"
-onclick="openJourney(4)">
-
-<div class="journey-number">04</div>
-
-<div class="journey-thumb">
-<img src="foto4.jpg">
-</div>
-
-<div class="journey-content">
+<div class="story-text">
 <h3>Lamaran</h3>
 <p>8 Februari 2026</p>
 </div>
 
 </div>
 
+
+<!-- 5 -->
+
+<div class="story-card"
+onclick="openJourney(4)">
+
+<div class="episode">
+EP 05
 </div>
 
-
-<!-- 05 -->
-<div class="journey-row left">
-
-<div class="journey-card"
-onclick="openJourney(5)">
-
-<div class="journey-number">05</div>
-
-<div class="journey-thumb">
-<img src="foto5.jpg">
+<div class="story-image">
+<img src="cover5.jpg">
 </div>
 
-<div class="journey-content">
+<div class="story-text">
 <h3>Foto Prewedding</h3>
 <p>2 Mei 2026</p>
 </div>
 
 </div>
 
-<div class="journey-arrow">
-➜
+
+<!-- 6 -->
+
+<div class="story-card"
+onclick="openJourney(5)">
+
+<div class="episode">
+EP 06
 </div>
 
+<div class="story-image">
+<img src="cover6.jpg">
 </div>
 
-
-<!-- 06 -->
-<div class="journey-row right">
-
-<div class="journey-arrow">
-⬅
-</div>
-
-<div class="journey-card"
-onclick="openJourney(6)">
-
-<div class="journey-number">06</div>
-
-<div class="journey-thumb">
-<img src="foto6.jpg">
-</div>
-
-<div class="journey-content">
+<div class="story-text">
 <h3>Latar Biru</h3>
 <p>3 Mei 2026</p>
 </div>
 
 </div>
 
-</div>
-
 
 </div>
+
 </div>
+
 </section>
+
+
+
+<!-- MODAL -->
+
+<div class="journey-modal"
+id="journeyModal">
+
+<div class="journey-modal-content">
+
+<div class="journey-close"
+onclick="closeJourney()">
+
+✕
+
+</div>
+
+<video
+id="journeyVideo"
+controls>
+
+</video>
+
+
+<div
+class="journey-gallery"
+id="journeyGallery">
+
+</div>
+
+</div>
+
+</div>
+
 
 
 <style>
@@ -185,88 +198,109 @@ overflow:hidden;
 
 }
 
-.journey-timeline{
+.journey-glow{
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+background:#D6B98C;
+
+filter:blur(200px);
+
+opacity:.05;
+
+top:20%;
+left:-100px;
+
+}
+
+.journey-list{
 
 display:flex;
 flex-direction:column;
-gap:40px;
 
-}
-
-.journey-row{
-
-display:flex;
-align-items:center;
-justify-content:space-between;
-
-}
-
-.journey-row.right{
-
-justify-content:flex-end;
 gap:25px;
 
 }
 
-.journey-row.left{
 
-justify-content:flex-start;
-gap:25px;
-
-}
-
-.journey-card{
-
-position:relative;
-width:320px;
-height:130px;
+.story-card{
 
 display:flex;
+
 align-items:center;
+
 gap:15px;
 
-padding:20px;
+padding:15px;
+
+background:
+rgba(20,20,20,.95);
 
 border-radius:30px;
 
-background:rgba(18,18,18,.95);
-
-border:1px solid rgba(255,255,255,.08);
-
-backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.05);
 
 box-shadow:
-0 20px 40px rgba(0,0,0,.5),
-inset 0 0 25px rgba(255,255,255,.02);
-
-transition:.5s;
+0 15px 40px rgba(0,0,0,.5);
 
 cursor:pointer;
 
+transition:.6s;
+
+transform-style:preserve-3d;
+
 }
 
-.journey-card:hover{
+
+.story-card:hover{
 
 transform:
-translateY(-8px)
+perspective(1000px)
 rotateX(8deg)
-scale(1.02);
+translateY(-10px);
 
 }
 
-.journey-thumb{
 
-width:75px;
-height:95px;
+.episode{
+
+min-width:65px;
+height:65px;
+
+border-radius:50%;
+
+background:#D6B98C;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+font-weight:bold;
+
+color:black;
+
+}
+
+
+.story-image{
+
+width:70px;
+height:100px;
 
 border-radius:20px;
 
 overflow:hidden;
+
 flex-shrink:0;
 
 }
 
-.journey-thumb img{
+
+.story-image img{
 
 width:100%;
 height:100%;
@@ -275,125 +309,272 @@ object-fit:cover;
 
 }
 
-.journey-content h3{
+
+.story-text h3{
 
 margin:0;
-font-size:1.3rem;
-color:#fff;
+
+font-size:1.2rem;
+
+color:white;
 
 }
 
-.journey-content p{
 
-margin-top:8px;
+.story-text p{
+
+margin-top:6px;
+
 color:#aaa;
 
+font-size:.9rem;
+
 }
 
-.journey-number{
 
-position:absolute;
-top:-15px;
-right:-15px;
 
-width:60px;
-height:60px;
+.journey-modal{
 
-border-radius:50%;
+position:fixed;
 
-background:#D6B98C;
+top:0;
+left:0;
 
-display:flex;
-justify-content:center;
+width:100%;
+height:100%;
+
+background:
+rgba(0,0,0,.95);
+
+z-index:9999;
+
+display:none;
+
 align-items:center;
 
-font-size:1.4rem;
-font-weight:bold;
-color:black;
+justify-content:center;
 
-}
-
-.journey-arrow{
-
-font-size:65px;
-color:#D6B98C;
-
-animation:
-moveArrow 1.5s infinite;
-
-}
-
-@keyframes moveArrow{
-
-0%{
-
-transform:translateX(0);
-
-}
-
-50%{
-
-transform:translateX(10px);
-
-}
-
-100%{
-
-transform:translateX(0);
-
-}
+padding:25px;
 
 }
 
 
-@media(max-width:768px){
+.journey-modal-content{
 
-.journey-card{
+width:100%;
+max-width:500px;
 
-width:250px;
-height:100px;
-padding:15px;
-
-}
-
-.journey-thumb{
-
-width:55px;
-height:70px;
+position:relative;
 
 }
 
-.journey-content h3{
 
-font-size:1rem;
+.journey-close{
+
+position:absolute;
+
+right:0;
+
+top:-50px;
+
+font-size:35px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+#journeyVideo{
+
+width:100%;
+
+height:450px;
+
+border-radius:25px;
+
+object-fit:cover;
+
+margin-bottom:20px;
 
 }
 
-.journey-content p{
 
-font-size:.8rem;
+
+.journey-gallery{
+
+display:flex;
+
+gap:10px;
+
+overflow:auto;
+
+}
+
+
+.journey-gallery img{
+
+width:100px;
+height:150px;
+
+border-radius:20px;
+
+object-fit:cover;
 
 }
 
-.journey-arrow{
-
-font-size:45px;
-
-}
-
-}
 
 </style>
 
 
+
+
 <script>
+
+const journeyData=[
+
+{
+
+video:"video1.mp4",
+
+photos:[
+"1a.jpg",
+"1b.jpg",
+"1c.jpg"
+]
+
+},
+
+{
+
+video:"video2.mp4",
+
+photos:[
+"2a.jpg",
+"2b.jpg",
+"2c.jpg"
+]
+
+},
+
+{
+
+video:"video3.mp4",
+
+photos:[
+"3a.jpg",
+"3b.jpg",
+"3c.jpg"
+]
+
+},
+
+{
+
+video:"video4.mp4",
+
+photos:[
+"4a.jpg",
+"4b.jpg",
+"4c.jpg"
+]
+
+},
+
+{
+
+video:"video5.mp4",
+
+photos:[
+"5a.jpg",
+"5b.jpg",
+"5c.jpg"
+]
+
+},
+
+{
+
+video:"video6.mp4",
+
+photos:[
+"6a.jpg",
+"6b.jpg",
+"6c.jpg"
+]
+
+}
+
+];
+
+
 
 function openJourney(id){
 
-alert(
-"Disini nanti muncul popup video + 3 foto untuk perjalanan "+id
+let modal=
+document.getElementById(
+"journeyModal"
 );
 
+let video=
+document.getElementById(
+"journeyVideo"
+);
+
+let gallery=
+document.getElementById(
+"journeyGallery"
+);
+
+video.src=
+journeyData[id].video;
+
+gallery.innerHTML="";
+
+
+journeyData[id]
+.photos
+.forEach(photo=>{
+
+gallery.innerHTML+=`
+
+<img src="${photo}">
+
+`;
+
+});
+
+
+modal.style.display=
+"flex";
+
+video.play();
+
 }
+
+
+
+function closeJourney(){
+
+let modal=
+document.getElementById(
+"journeyModal"
+);
+
+let video=
+document.getElementById(
+"journeyVideo"
+);
+
+modal.style.display=
+"none";
+
+video.pause();
+
+}
+
+
 
 </script>
